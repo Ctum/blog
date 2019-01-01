@@ -1,0 +1,28 @@
+extends ./layout/default
+
+block title
+  title hanyang's blog
+  link(href='/css/index.css' rel='stylesheet')
+
+block content
+  .box
+    .inner
+      .center-field
+        img(src='/img/user-64.png').avatar
+      .center-field
+        h2 YangHan
+        p Nodejs Front-End Python Developer
+      hr
+      .center-field
+        ul.index-nav
+          li 首页
+          li 文章
+          li 标签
+          li 分类
+          li 关于
+          li GitHub
+        ul.social-link
+          li weibi
+          li zhihu
+          li csdn
+          li 羽雀
