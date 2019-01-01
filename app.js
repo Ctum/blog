@@ -22,9 +22,7 @@ app.use(serve(resolve(__dirname, './static')));
 // })
 
 // 路由
-const signin = require('./router/signin');
-const index = require('./router/index')
-app.use(signin.routes());
-app.use(index.routes());
+const user = require('./router/user');
+app.use(user.routes());
 
 app.listen(8000, console.log('koa2 is running at http://127.0.0.1:8000'));

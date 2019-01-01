@@ -3,7 +3,6 @@ const bcrypt = require('bcryptjs');
 
 class UserController {
   static async create(ctx) {
-    console.log(ctx.request.body, 'll');
     const user = ctx.request.body;
 
     if(user.username && user.password) {
@@ -11,7 +10,10 @@ class UserController {
 
       if(existName) {
         ctx.response.status = 403;
-        ctx.body = '用户已经存在';
+        ctx.body = {
+          code: 403,
+          msg: '用户已存在'
+        };
       } else {
         const salt = bcrypt.genSaltSync();
         const hash = bcrypt.hashSync(user.password, salt);

@@ -5,6 +5,7 @@
 * mysql
 * bootstrap
 * jquery
+* pug
 
 ----
 
